@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author: evan
  * @date: 2021/11/22
  */
-public class AppExample {
+public class MementoExample {
 
     public static void main(String[] args) {
         Originator inputText = new Originator();

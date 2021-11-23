@@ -1,7 +1,5 @@
 package com.github.evan.patterns.strategy;
 
-import com.github.evan.patterns.strategy.impl.AliPayChannel;
-
 /**
  * @desc: 订单支付  使用策略
  * @author: evan 
@@ -15,7 +13,7 @@ public class OrderPay {
 
 
     private static void memberOrderPay(String reqParam){
-        PayChannel payChannel = new AliPayChannel();
+        PayChannel payChannel = PayChannelFactory.getPayChannel(PayChannelTypeEnum.ALI.name());
         payChannel.qrcodePay(reqParam);
     }
 
